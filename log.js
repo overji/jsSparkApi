@@ -7,9 +7,9 @@ const storageDirectory = path.join(process.cwd(),"output_log/");
 
 async function log(log_info) {
     try{
-        fs.access(storageDirectory);
+        await fs.access(storageDirectory);
     } catch {
-        fs.mkdir(storageDirectory);
+        await fs.mkdir("output_log");
     }
     console.log(log_info);
     log_info += '\n';
@@ -37,3 +37,5 @@ export async function logError(error){
     let log_info = `[INFO] ${fTime} ${error}`;
     log(log_info);
 }
+
+log("a")

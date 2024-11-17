@@ -126,3 +126,5 @@ export async function resetInputInfo(){
     })
     logInfo("Clear Input Prompt");
 }
+
+llmSendSingleMessage("我喜欢你")
