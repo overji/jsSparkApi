@@ -37,5 +37,3 @@ export async function logError(error){
     let log_info = `[INFO] ${fTime} ${error}`;
     log(log_info);
 }
-
-log("a")

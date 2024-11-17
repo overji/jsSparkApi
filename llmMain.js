@@ -70,6 +70,11 @@ async function getRequest(header_text_arr) {
                         "content": ans.text
                     };
                     header_text_arr.push(midJson);
+                    try{
+                        await fs.access(path.join(process.cwd(), "output_save/"))
+                    } catch {
+                        await fs.mkdir(path.join(process.cwd(), "output_save/"))
+                    }
                     await fs.writeFile(savePath, JSON.stringify(header_text_Json));
                     logInfo(ans.text);
                     logInfo(`Summary: Cost ${ans.prompt_tokens} tokens in prompt. ${ans.completion_tokens} tokens in completion. ${ans.total_tokens} in total.`);
@@ -127,4 +132,3 @@ export async function resetInputInfo(){
     logInfo("Clear Input Prompt");
 }
 
-llmSendSingleMessage("我喜欢你")
