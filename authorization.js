@@ -33,7 +33,7 @@ function getAuth(url, getTarget, secret, apikey) {
     let time = getHTTPTime();
     let tmp = getAuthorStr(url, getTarget, time);
     let signature = AuthorizeStr(tmp, secret);
-    let authorStr = `api_key='${apikey}', algorithm='hmac-sha256', headers='host date request-line', signature='${signature}'`;
+    let authorStr = `api_key="${apikey}", algorithm="hmac-sha256", headers="host date request-line", signature="${signature}"`;
     const utf8AuthorStr = CryptoJS.enc.Utf8.parse(authorStr);
     return CryptoJS.enc.Base64.stringify(utf8AuthorStr);
 }

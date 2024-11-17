@@ -2,10 +2,10 @@
   "llmMain": {
     "url": "spark-api.xf-yun.com",
     "getTarget": "/v4.0/chat",
-    "secret": "ZDMwZTdhMzYxZjM5NzMzYThmNmFmOTA2",
-    "apikey": "f8ce6f10acbff1d663cf3349d6d140b2",
+    "secret": "xxx",
+    "apikey": "xxx",
     "wssUrl": "wss://spark-api.xf-yun.com/v4.0/chat",
-    "appid" : "2bc1c9fe",
+    "appid" : "xxx",
     "domain" : "4.0Ultra"
   }
 }
